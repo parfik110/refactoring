@@ -87,40 +87,21 @@ document.addEventListener('DOMContentLoaded', function() {
         passiveButton.classList.add('passive');
     }
 
-    prevButton.addEventListener('click', function() {
-        currentIndex = (currentIndex === 0) ? currentIndex  : currentIndex - 1;
-        updateGallery(currentIndex);
-        toggleButtonState(prevButton, nextButton); 
-    });
-
-    nextButton.addEventListener('click', function() {
-        currentIndex = (currentIndex === images.length - 1) ? currentIndex  : currentIndex + 1;
-        updateGallery(currentIndex);
-        toggleButtonState(nextButton, prevButton);  
-    });
-    prevButton1.addEventListener('click', function() {
-        currentIndex1 = (currentIndex1 === 0) ? currentIndex1  : currentIndex1 - 1;
-        updateGallery1(currentIndex1);
-        toggleButtonState(prevButton1, nextButton1); 
-    });
-
-    nextButton1.addEventListener('click', function() {
-        currentIndex1 = (currentIndex1 === images1.length - 1) ? currentIndex1  : currentIndex1 + 1;
-        updateGallery1(currentIndex1);
-        toggleButtonState(nextButton1, prevButton1);  
-    });
+    function setupNavigation(buttonPrev, buttonNext, section) {
+        let currentIndex = 0;
+        buttonPrev.addEventListener("click", () => {
+            currentIndex = (currentIndex === 0) ? section.images.length - 1 : currentIndex - 1;
+            updateGallery(section, currentIndex);
+        });
+        buttonNext.addEventListener("click", () => {
+            currentIndex = (currentIndex === section.images.length - 1) ? 0 : currentIndex + 1;
+            updateGallery(section, currentIndex);
+        });
+    }
+    
     buttons.forEach((button) => {
         button.addEventListener('click', () => {
             window.location.reload();
         });
-    });
-    prevButton2.addEventListener('click', function(){
-        currentIndex2=(currentIndex2 === 0) ? images2.length-1 : currentIndex2-1;
-        updateGallery2(currentIndex2);  
-
-    });
-    nextButton2.addEventListener('click', function() {
-        currentIndex2 = (currentIndex2 === images2.length - 1) ? 0 : currentIndex2 + 1;
-        updateGallery2(currentIndex2); 
     });
 });
