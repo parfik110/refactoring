@@ -40,21 +40,37 @@ document.addEventListener('DOMContentLoaded', function() {
     const imageElement2 = document.getElementById('gallery-image2');
     const buttons=document.querySelectorAll('.button');
 
-    function updateGallery(index) {
-        imageElement.src = images[index];
-        dateElement.textContent = dates[index];
-        textElement.textContent = texts[index];
-    }
-    function updateGallery1(index) {
-        imageElement1.src = images1[index];
-        dateElement1.textContent = dates1[index];
-        textElement1.textContent = texts1[index];
-    }
-    function updateGallery2(index) {
-        imageElement2.src = images2[index];
-        //dateElement1.textContent = dates1[index];
-        //textElement1.textContent = texts1[index];
-        updateDots(index);
+    const elements = {
+        1: {
+            image: document.getElementById('gallery-image'),
+            date: document.getElementById('gallery-date'),
+            text: document.getElementById('gallery-text')
+        },
+        2: {
+            image: document.getElementById('gallery-image1'),
+            date: document.getElementById('gallery-date1'),
+            text: document.getElementById('gallery-text1')
+        },
+        3: {
+            image: document.getElementById('gallery-image2'),
+            date: null, 
+            text: null
+        }
+    };
+    
+    const indices = { 1: 0, 2: 0, 3: 0 };
+    
+    function updateGallery(index, number, galleryKey) {
+        const el = elements[number];
+        const gallery = galleries[galleryKey];
+    
+        if (!el || !gallery) return;
+    
+        el.image.src = gallery.images[index];
+        if (el.date && gallery.dates) el.date.textContent = gallery.dates[index];
+        if (el.text && gallery.texts) el.text.textContent = gallery.texts[index];
+    
+        indices[number] = index;
     }
 
     function updateDots(index) {
