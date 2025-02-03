@@ -1,20 +1,27 @@
 document.addEventListener('DOMContentLoaded', function() {
     
-    const images = ["images/vangog1.svg", "images/vangog2.svg"];
-    const dates = ["17/07 - 17/08", "20/06 - 20/07"];
-    const texts = [
-        "incent Van Gogh was born in Holland in 1853. Before becoming a painter he was a teacher. Finally, on Sunday 27th July 1890, Van Gogh died in his brother's arms.",
-        "Vincent Van Gogh was born in Holland in 1853.Before becoming a painter he was a teacher.er Van Gogh died in his brother's arms.",
-    ];
-
-    const images1 = ["images/picture.svg","images/picture1.svg" ];
-    const dates1 = ["22/10 - 22/12", "12/09 - 16/09"];
-    const texts1 = [
-        "incent Van Gogh was born in Holland in 1853. Before becoming a painter he was a teacher. Finally, on Sunday 27th July 1890, Van Gogh died in his brother's arms.",
-        "He started painting when he was twenty-seven. In 1886 he left Holland and joined his young brother Theo.",
-    ];
-
-    const images2 = ["images/galary.svg","images/picture1.svg" ];
+    const galleries = {
+        tickets1: {
+            images: ["images/vangog1.svg", "images/vangog2.svg"],
+            dates: ["17/07 - 17/08", "20/06 - 20/07"],
+            texts: [
+                "Vincent Van Gogh was born in Holland in 1853. Before becoming a painter he was a teacher. Finally, on Sunday 27th July 1890, Van Gogh died in his brother's arms.",
+                "Vincent Van Gogh was born in Holland in 1853. Before becoming a painter he was a teacher. Van Gogh died in his brother's arms.",
+            ]
+        },
+        tickets2: {
+            images: ["images/picture.svg", "images/picture1.svg"],
+            dates: ["22/10 - 22/12", "12/09 - 16/09"],
+            texts: [
+                "Vincent Van Gogh was born in Holland in 1853. Before becoming a painter he was a teacher. Finally, on Sunday 27th July 1890, Van Gogh died in his brother's arms.",
+                "He started painting when he was twenty-seven. In 1886 he left Holland and joined his young brother Theo.",
+            ]
+        },
+        paintings: {
+            images: ["images/galary.svg", "images/picture1.svg"]
+        }
+    };
+    
 
     let currentIndex = 0, currentIndex1=0, currentIndex2=0;
 
