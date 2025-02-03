@@ -1,0 +1,254 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: #2C4649;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+section{
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.first{
+    height: 750px;
+}
+
+.firstblock{
+    width: 845px;
+    height: 593px;
+}
+
+.firsttext{
+    height: 501px;
+    padding-top: 72px;
+}
+
+.second{
+    height: 772px;
+    background-color: rgba(85, 123, 123, 1);
+}
+
+.third{
+    height: 930px;
+}
+.VanGoghGallery{
+    padding-top: 32px;
+    justify-content: space-between;
+    display: flex;
+    font-weight: bold;
+    color: #2C4649;
+    
+}
+
+.underline{
+    border-bottom: 2px solid white;
+}
+.underline1{
+    border-bottom: 2px solid #557B7B;
+}
+
+.space{
+    justify-content: space-between;
+    display: flex;
+}
+
+.main{
+    
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.background-container {
+    background-image: url('images/vangog.svg'); 
+    background-size: auto 100%; 
+    background-position: right; 
+    background-repeat: no-repeat; 
+}
+
+.bigtext{
+    font-family: "Unlock", serif;
+    font-size: 128px;
+    text-align: justify;
+    letter-spacing: 27px;
+}
+
+.defaulttext{
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+}
+
+.boxik{
+    width: 555px;
+    height: 140px;
+    text-align: left;
+}
+
+.button{
+    height: 39px;
+    width: 214px;
+    border-radius: 20px;
+    padding: 10px 1px 10px 0px;
+    transition: transform 0.3s ease;
+}
+
+.button1{
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    border: 1px solid white;
+    transition: transform 0.3s ease;
+}
+
+.button2{
+    height: 70px;
+    width: 70px;    
+    background-color: white;
+    border-radius: 50px;
+    border: 1px solid #557B7B;
+    transition: transform 0.3s ease;
+}
+
+
+.color{
+    background-color: #557B7B;
+    border: none;
+    color: white;
+}
+.color1{
+    color: #2F5050;
+}
+.color2{
+    color: #AEAEAE;
+}
+
+.galary{
+    width: 628px;
+    height: 413px;
+}
+.galary1{
+    width: 689px;
+    height: 521px;
+}
+.gap{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.gap1{
+    display: flex;
+    gap: 24px;
+}
+.gap2{
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+.gap3{
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+.gap4{
+    display: flex;
+    gap: 14px;
+}
+
+
+.picture{
+    width: 302px;
+}
+.date{
+    width: 271px;
+    height: 241px;
+}
+
+.middletext{
+    font-family: "Unlock", serif;
+    font-size: 32px;
+}
+.formatted-text {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.colorbutton{
+    background-color: #557B7B;
+    border: 2px solid white;
+    color: white;
+}
+
+.center{
+    margin: 0 auto;
+}
+.center1{
+    text-align: center;
+}
+.center2{
+    display: flex;
+    align-items: center;
+}
+
+.active{
+    background-color: white;
+    color: #557B7B;
+}
+.passive{
+    background-color: #557B7B;
+    color: white;
+}
+.info{
+    width: 521px;
+    height: 473px;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #557B7B;
+}
+
+.top{
+    margin-top: 20px;
+}
+
+.thirdtext{
+    width: 426px;
+}
+.thirddiv{
+    width: 481px;
+}
+
+.button1.active:hover {
+    transform: scale(1.2); 
+}
+.button2:hover {
+    transform: scale(1.2); 
+}
+.button:hover {
+    transform: scale(1.2); 
+}
+.dots-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    height: 5px;
+    width: 50px;
+    margin: 0 4px;
+    background-color: #d3d3d3;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #557B7B;
+}
